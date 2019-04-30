@@ -9,7 +9,7 @@
     $.getJSON( "conf.json" , function( result ){
         db = result.db;
 				console.log(db);
-				$.get("http://"+db+":5555/data/", function(resp) {
+				$.get("https://"+db+":5555/data/", function(resp) {
 				    console.log(resp);
 				})
     });
