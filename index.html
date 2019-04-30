@@ -1,1 +1,23 @@
-<span>hi</span>
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" language="javascript" src="jquery-1.8.2.min.js"></script>        
+
+<script type="text/javascript">
+    $(document).ready(function(e) {
+    $.getJSON( "conf.json" , function( result ){
+        alert(result.db);
+    });
+});
+</script>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<script>
+</script>
+</body>
+</html>
