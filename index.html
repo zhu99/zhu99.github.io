@@ -5,12 +5,14 @@
 
 <script type="text/javascript">
     var db = null;
+		
     $(document).ready(function(e) {
     $.getJSON( "conf.json" , function( result ){
         db = result.db;
 				console.log(db);
 				$.get("https://"+db+"/data", function(resp) {
 				    console.log(resp);
+						$('#tt').text(resp)
 				})
     });
 });
@@ -20,7 +22,7 @@
 <body>
 
 <h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<span id="tt">This is a paragraph.</span>
 
 <script>
 </script>
