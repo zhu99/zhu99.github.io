@@ -1,1 +1,30 @@
-<span>hi</span>
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" language="javascript" src="lib/jquery-3.4.0.min.js"></script>        
+
+<script type="text/javascript">
+    var db = null;
+		
+    $(document).ready(function(e) {
+    $.getJSON( "conf.json" , function( result ){
+        db = result.db;
+				console.log(db);
+				$.get("https://"+db+"/data", function(resp) {
+				    console.log(resp);
+						$('#tt').text(resp)
+				})
+    });
+});
+</script>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<span id="tt">This is a paragraph.</span>
+
+<script>
+</script>
+</body>
+</html>
